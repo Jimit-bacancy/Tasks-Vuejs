@@ -20,7 +20,7 @@
         <b-table striped hover bordered :items="totaldata" :filter="filter" show-empty stacked="md"
                 :per-page="perPage" :current-page="currentPage" :fields="fields"> 
             <template v-slot:cell(actions)="data">
-                <b-button variant="danger" @click="deleteItem(data.item.uid)">Delete</b-button>
+                <b-button variant="danger" @click="deleteItem(data.item.id)">Delete</b-button>
             </template>
         </b-table>
         <b-pagination v-model="currentPage" align="center" pills size="lg" :total-rows="rows" :per-page="perPage"></b-pagination>
@@ -75,19 +75,18 @@ export default {
       // totaldata: [],
     };
   },
-  // watch: {
-  //     options:{ 
-  //         handler(){
-  //             this.getData();
-  //         }
-  //     },
-  //     deep: true,
-  // },
+  watch: {
+      options:{ 
+          handler(){
+              this.getData();
+          }
+      },
+      deep: true,
+  },
   computed: {
     ...mapState(['totaldata']),
     rows() {
       if (this.totaldata) {
-
         return this.totaldata.length;
       } else {
         return 0; 

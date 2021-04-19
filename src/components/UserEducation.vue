@@ -4,12 +4,13 @@
     <br /><br />
     <b-row>
       <b-col md="3">
-        <div class="input-group align-items-center">
+        <div class="input-group align-items-center justify-content-between">
             <b-form-input
             v-model="filter"
             type="search"
             placeholder="Search"
             ></b-form-input>
+            <b-button class="mr-2" to="/">Add Data</b-button>
             <!-- <i class="fa fa-search fa" aria-hidden="true"></i> -->
         </div>
       </b-col> </b-row><br />
@@ -75,6 +76,14 @@ export default {
         }
       ],
     };
+  },
+  watch: {
+      options:{ 
+          handler(){
+              this.getData();
+          }
+      },
+      deep: true,
   },
   computed: {
     ...mapState(['totaldata']),
