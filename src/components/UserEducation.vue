@@ -11,7 +11,6 @@
             placeholder="Search"
             ></b-form-input>
             <b-button class="mr-2" to="/">Add Data</b-button>
-            <!-- <i class="fa fa-search fa" aria-hidden="true"></i> -->
         </div>
       </b-col> </b-row><br />
     <b-row>
@@ -32,7 +31,6 @@
 import axios from 'axios';
 import { mapState } from 'vuex';
 export default {
-  // props: ["formdata"],
   data() {
     return {
       filter: "",
@@ -40,7 +38,6 @@ export default {
       key: "actions",
       label: "Actions",
       currentPage: 1,
-      // fields: ['id','fname','lname','institute','branch','cgpa','startdate','enddate','actions'],
       fields: [
         {
           key: 'fname',
@@ -96,10 +93,6 @@ export default {
     },
   },
   methods: {
-      // deleteItem(id){
-      //   const index = this.formdata.indexOf((x) => x.id === id);
-      //   this.formdata.splice(index,1);
-      // }
       deleteItem(id) {
       if (confirm("Are you sure you want to delete this Data?")) {
         axios

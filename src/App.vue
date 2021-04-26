@@ -29,10 +29,6 @@ export default {
 body{
   min-height: 100vh;
   width: 100vw;
-  /* background-image: url('');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-attachment: fixed; */
 }
 
 #nav {

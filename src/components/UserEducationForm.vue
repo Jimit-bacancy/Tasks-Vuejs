@@ -11,9 +11,6 @@
             <div class="card-body">
               <b-form class="form-horizontal" method="post">
                 <div class="form-group">
-                  <!-- <label for="institute" class="cols-sm-2 control-label"
-                    >Institute / School name</label
-                  > -->
                   <div class="cols-sm-10">
                     <div class="input-group align-items-center">
                       <span class="input-group-addon"
@@ -34,9 +31,6 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <!-- <label for="stream" class="cols-sm-2 control-label"
-                    >Your LastName</label
-                  > -->
                   <div class="cols-sm-10">
                     <div class="input-group align-items-center">
                       <span class="input-group-addon"
@@ -57,9 +51,6 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <!-- <label for="cgpa" class="cols-sm-2 control-label"
-                    >Email</label
-                  > -->
                   <div class="cols-sm-10">
                     <div class="input-group align-items-center">
                       <span class="input-group-addon"
@@ -76,9 +67,7 @@
                         required
                       />
                       <div class="invalid-feedback" v-if="!$v.cgpa.required">CGPA is required.</div>
-                      <!-- <div class="invalid-feedback" v-if="!$v.cgpa.minLength">You must have at least {{ $v.cgpa.$params.minLength.min }} CGPA.</div>
-                      <div class="invalid-feedback" v-if="!$v.cgpa.maxLength">You can not enter more than {{ $v.cgpa.$params.maxLength.max }} CGPA.</div> -->
-                    </div>
+                      </div>
                   </div>
                 </div>
                 <div class="form-row">
@@ -129,7 +118,6 @@
                 </div>
                   <b-button class="btn btn-outline-primary text-white mr-2" block pill @click.prevent="btnPrevious">Previous</b-button>
                   <b-button class="btn btn-success text-white mr-2" block pill @click.prevent="submitForm">Register</b-button>
-                  <!-- <navigation></navigation> -->
               </b-form>
             </div>
           </div>
@@ -139,12 +127,8 @@
 </template>
 
 <script>
-// import Navigation from './Navigation.vue';
 import { required } from 'vuelidate/lib/validators';
 export default {
-    components:{
-        // Navigation,
-    },
     data() {
         return {
             isShow: false,
@@ -195,7 +179,6 @@ export default {
     validations:{
       institute : { required },
       stream : { required },
-      // cgpa : { required, minLength: minLength(1), maxLength: maxLength(2)},
       cgpa : { required},
       startdate: { required },
       enddate: { required},

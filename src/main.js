@@ -6,10 +6,8 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import Vuelidate from 'vuelidate';
 import { ClientTable } from 'vue-tables-2';
 
-
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-// import '@/assets/css/main.css'
 
 Vue.config.productionTip = false
 

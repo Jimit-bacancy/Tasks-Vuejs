@@ -8,9 +8,6 @@
             <div class="card-body">
               <b-form class="form-horizontal">
                 <div class="form-group">
-                  <!-- <label for="fname" class="cols-sm-2 control-label"
-                    >First Name</label
-                  > -->
                   <div class="cols-sm-10">
                     <div class="input-group align-items-center">
                       <span class="input-group-addon"
@@ -32,9 +29,6 @@
                 </div>
                 
                 <div class="form-group">
-                  <!-- <label for="lname" class="cols-sm-2 control-label"
-                    >Your LastName</label
-                  > -->
                   <div class="cols-sm-10">
                     <div class="input-group align-items-center">
                       <span class="input-group-addon"
@@ -73,9 +67,6 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <!-- <label for="email" class="cols-sm-2 control-label"
-                    >Email</label
-                  > -->
                   <div class="cols-sm-10">
                     <div class="input-group align-items-center">
                       <span class="input-group-addon"
@@ -96,9 +87,6 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <!-- <label for="phone" class="cols-sm-2 control-label"
-                    >Phone Number</label
-                  > -->
                   <div class="cols-sm-10">
                     <div class="input-group align-items-center">
                       <span class="input-group-addon"
@@ -118,9 +106,6 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <!-- <label for="password" class="cols-sm-2 control-label"
-                    >Password</label
-                  > -->
                   <div class="cols-sm-10">
                     <div class="input-group align-items-center">
                       <span class="input-group-addon"
@@ -142,9 +127,6 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <!-- <label for="confirm" class="cols-sm-2 control-label"
-                    >Confirm Password</label
-                  > -->
                   <div class="cols-sm-10">
                     <div class="input-group align-items-center">
                       <span class="input-group-addon"
@@ -166,7 +148,6 @@
                 <div class="form-group">
                   <b-button class="btn-block" variant="outline-primary" @click.prevent="submitForm1" pill>Next</b-button>
                 </div>
-                <!-- <navigation v-bind:on-click="submitForm1"></navigation> -->
               </b-form>
               
             </div>
@@ -178,12 +159,8 @@
 </template>
 
 <script>
-// import Navigation from './Navigation.vue';
 import { required, email, minLength, maxLength, sameAs } from 'vuelidate/lib/validators';
 export default {
-  components:{
-    // Navigation
-  },
   data() {
     return {
     };

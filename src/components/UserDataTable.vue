@@ -10,7 +10,6 @@
             type="search"
             placeholder="Search"
             ></b-form-input>
-            <!-- <i class="fa fa-search fa" aria-hidden="true"></i> -->
             <b-button class="mr-2" to="/">Add Data</b-button>
         </div>
         
@@ -33,7 +32,6 @@
 import axios from 'axios';
 import { mapState } from 'vuex';
 export default {
-  // props: ["totaldata"],
   data() {
     return {
       filter: "",
@@ -41,12 +39,7 @@ export default {
       currentPage: 1,
       key: "actions",
       label: "Actions",
-      // fields: ['id','fname','lname','gender','email','phone','actions'],
       fields: [
-        // {
-        //   key: 'id',
-        //   sortable: true,
-        // },
         {
           key: 'fname',
           sortable: true,
@@ -72,7 +65,6 @@ export default {
           sortable: true,
         }
       ],
-      // totaldata: [],
     };
   },
   watch: {
@@ -94,10 +86,6 @@ export default {
     },
   },
   methods: {
-      // deleteItem(id){
-      //   const index = this.formdata.indexOf((x) => x.id === id);
-      //   this.formdata.splice(index,1);
-      // },
       deleteItem(id) {
       if (confirm("Are you sure you want to delete this Data?")) {
         axios
@@ -113,23 +101,6 @@ export default {
           });
       }
     },
-      // getData(){
-        // this.$store.dispatch('getFormData');
-        //   const { page, itemsPerPage } = this.options;
-        //   let pageNumber = page - 1; 
-          // axios.get('https://registration-form-e64d5-default-rtdb.firebaseio.com/formResponse.json')
-          //   .then((res)=>{
-          //       // console.log(res);
-          //       this.totaldata = res.data.data;
-          //       console.log(res.data); 
-          //   });
-          // fetch('https://registration-form-e64d5-default-rtdb.firebaseio.com/formResponse.json',{
-          //   method: 'GET',
-
-          // }).then((res)=> res.json())
-          // .then((data)=> console.log(data))
-          // .catch((err)=> console.log(err));
-      // }
   },
   mounted() {
     console.log("Posts =", this.totaldata);
